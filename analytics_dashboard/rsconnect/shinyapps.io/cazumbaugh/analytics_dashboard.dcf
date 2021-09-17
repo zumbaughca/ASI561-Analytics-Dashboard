@@ -1,0 +1,11 @@
+name: analytics_dashboard
+title:
+username:
+account: cazumbaugh
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4528584
+bundleId: 5037208
+url: https://cazumbaugh.shinyapps.io/analytics_dashboard/
+when: 1631737994.6188
+lastSyncTime: 1631737994.61882

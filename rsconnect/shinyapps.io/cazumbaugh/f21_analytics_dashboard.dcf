@@ -1,0 +1,11 @@
+name: f21_analytics_dashboard
+title:
+username:
+account: cazumbaugh
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4528561
+bundleId: 4958294
+url: https://cazumbaugh.shinyapps.io/f21_analytics_dashboard/
+when: 1629814033.077
+lastSyncTime: 1629814033.07702

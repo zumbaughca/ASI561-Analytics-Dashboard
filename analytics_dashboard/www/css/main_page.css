@@ -1,0 +1,54 @@
+#main_title {
+    color: #512888;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
+
+p {
+  font-size: 18px;
+}
+
+div {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+#fit > table, #anova > table, #pairwise > table {
+  margin: auto;
+}
+
+#DataTables_Table_0 {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #512888;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+  color: #333;
+  background-color: #e7e7e7;
+}
+
+.center-content {
+  text-align: center;
+  margin: auto;
+}
+
+.center-content > p {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.selections {
+  display: inline;
+}
+

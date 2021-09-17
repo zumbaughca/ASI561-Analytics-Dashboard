@@ -1,0 +1,86 @@
+<RESOURCES>
+  <STRINGS>
+    <TITLE>ASI 560 Beef Lab Analytics Dashboard</TITLE>
+    <OVERVIEW>
+      This experiment is utilizing 45 dairy x beef calves to evaluate 
+      the effects of supplementing guanidinoacetic acid (GAA) in the milk replacer.
+      Guanidinoacetic acid is a direct precusror to creatine, and is synthesized endogenously 
+      from the amino acids arginine and glycine. In the body, creatine is involved
+      in energy metabolism by transferring phosphates between ATP and ADP (see Figure 1).
+    </OVERVIEW>
+    <OVERVIEWB>
+      has shown that supplementing GAA to growing bulls improves growth performance
+      and results in physiological changes. For example, supplementing GAA at 
+      0.6 g/kg DM reduced ruminal pH, increased the molar percentage of propionate,
+      and reduced the molar percentage of acetate. 
+    </OVERVIEWB>
+    <MODELDESC>
+      The table that you are seeing above is the output of the linear 
+      regression model for the chosen dependent variable. When these data are analyzed,
+      the computer will use ordinary least squares regresstion to
+      fit a line to the data that minimizes something called the 
+      sum of squares of the residuals. This means that it is trying to minimize
+      the distance between the value of the data point and the value of what is
+      predicted by the model for that data point, for all data. The summary table
+      has 5 different columns. The term column refers to a particular treatment 
+      combination and the intercept actually refers to the first treatment combination.
+      The estimates correspond to the coefficient for each term in the regression
+      equation. If you wanted to develop an equation to predict your dependent variable
+      based on the treatment, this is what you would use. For discrete, factor 
+      treatments, you would simply use 1 or 0 for the terms based on whether or
+      not the subject received that treatment. The Std. Error column displays 
+      the error associated with the estimate. Finally, the t and P values 
+      denote whether or not that estimate is different from 0. If the P value
+      is less than the cutoff (typically 0.05), then we say that the estimate
+      is different from 0. That is, that particular treatment combination
+      influenced your dependent variable beyond what is predicted by the intercept.
+    </MODELDESC>
+    <ANOVADESC>
+      Analysis of Variance, or ANOVA, is a method that can be used for
+      determining if differences exist when the independent variables
+      (in this case treatment) are factors (ie. they don't have numerical
+      significance like treatment A, B, C, etc.). Although the output and
+      interpretation of the output is different, ANOVA and regression are
+      two sides of the same coin. In the ANOVA table, we have 6 columns. The source
+      column tells us what term in the model the values are referring to. The
+      Df column denoted the degrees of freedom. A degree of freedom is simply
+      the number of treatments, observations, groups, etc. minus 1. In our case
+      we have 4 treatments, so our treatment degrees of freedom is 3. The residual
+      degrees of freedom are essentially what's left over. It is the total
+      number of degrees of freedom minus what is consumed by the model. Sum Sq
+      and Mean Sq refer to the sum of squares and the mean square, respectively.
+      They are essentially measures of the variation in your data. 
+      Finally, we have the F and P values column, which are what most folks
+      are after with this analysis. The F value is calculated from the mean square
+      column, and is used, along with degrees of freedom, to look up the P value. 
+      The P value denotes whether or not a particular factor in the model
+      (say treatment) resulted in differences. For example, if the P value
+      for treatment is less than the cutoff (0.05) then we know that at least
+      one mean is different. BUT, we don't know which mean(s) is/are different.
+      To determine that we need to run another analysis such as orthogonal 
+      contrasts, pairwise comparisons, etc. You may notice that the P value
+      column has weird notation (Pr(>F)). The F distribution is a single-tailed 
+      distribution in which small values indicate little differences between means.
+      So what this notation means, is that given that the null hypothesis
+      (no differences between means) is true, this is the probability of 
+      obtaining an F statistic at least as large as what we got with our data. 
+      A large P value means that it is not unlikely (our results don't really 
+      conflict with the null hypothesis), while a very small P value means that
+      it is unlikely that we would obtain this F value if the null
+      hypothesis were true.
+    </ANOVADESC>
+    <LSMEANSDESC>
+      Lease squares means (LS Means) are means that are predicted by the model.
+      In the case of a completely balanced design, they will be identical
+      the the observed means of each group. However, in unbalanced designs the
+      two will differ. They are computed by using the regression equation developed
+      by the model to predict the value of each factor level. LS Means are 
+      thought to be more representative of the "true" means in unbalanced designs.
+      The SE is the standard error of the mean (standard deviation / sqrt(# samples)),
+      and is commonly used to report the variation in the data. The upper and
+      lower confidence limits, with a given confidence level (usually but not always 95%)
+      essentially say "we are 95% confident that the true population mean
+      falls somewhere in this range".
+    </LSMEANSDESC>
+  </STRINGS>
+</RESOURCES>
