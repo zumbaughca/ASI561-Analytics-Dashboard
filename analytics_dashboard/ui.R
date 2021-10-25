@@ -41,16 +41,20 @@ shinyUI(fluidPage(title = "ASI 560 Analytics Dashboard",
                            column(6,
                                   selectInput(inputId = 'graphDependentVar',
                                               label = h3("Select a response"),
-                                              choices = list("ADG" = "ADG035",
-                                                             "ADFI" = "ADFId035",
-                                                             "G:F" = "GF035"))),
+                                              choices = list("Weight" = "wt",
+                                                             "Hip Height" = "hh",
+                                                             "ADG" = "adg"
+                                                             # "ADFI" = "ADFI",
+                                                             # "G:F" = "GF"
+                                                             ))),
                            column(6,
                                   selectInput(inputId = 'graphDay',
                                               label = h3("Select a day"),
                                               choices = list("0" = "0",
-                                                             "0 - 14" = "14",
-                                                             "0 - 28" = "28",
-                                                             "0 - 42" = "42")))
+                                                             "14" = "14",
+                                                             "28" = "28"
+                                                             # "0 - 42" = "42"
+                                                             )))
                          ),
                          plotOutput("result_plot")
                        ),
@@ -77,18 +81,20 @@ shinyUI(fluidPage(title = "ASI 560 Analytics Dashboard",
                                 selectInput(inputId = "meansDependentVariable",
                                             label = h3("Select a response"),
                                             choices = list(
-                                              "ADG" = "ADG035",
-                                              "ADFI" = "ADFId035",
-                                              "G:F" = "GF035"
+                                              "Weight" = "wt",
+                                              "Hip Height" = "hh",
+                                              "ADG" = "adg"
+                                              # "ADFI" = "ADFI",
+                                              # "G:F" = "GF"
                                             ))),
                          column(6,
                                 selectInput(inputId = "meansDay",
                                             label = h3("Select a day"),
                                             choices = list(
                                               "0" = "0",
-                                              "0 - 14" = "14",
-                                              "0 - 28" = "28",
-                                              "0 - 42" = "42"
+                                              "14" = "14",
+                                              "28" = "28"
+                                              # "0 - 42" = "42"
                                             )))
                        ),
                        div(style = "width: 100%;",

@@ -16,13 +16,13 @@
     </OVERVIEWB>
     <MODELDESC>
       The table that you are seeing above is the output of the linear 
-      regression model for the chosen dependent variable. When these data are analyzed,
-      the computer will use ordinary least squares regresstion to
-      fit a line to the data that minimizes something called the 
-      sum of squares of the residuals. This means that it is trying to minimize
-      the distance between the value of the data point and the value of what is
-      predicted by the model for that data point, for all data. The summary table
-      has 5 different columns. The term column refers to a particular treatment 
+      regression model for the chosen dependent variable. These data were 
+      fit with something called a mixed model that contains both fixed and
+      random effects. When these data are analyzed,
+      the computer will use restricted maximum likelihood to generate coefficients
+      for each term by maximizing the likelihood function, so that under the model,
+      the data are most probable. The summary table
+      has 6 different columns. The term column refers to a particular treatment 
       combination and the intercept actually refers to the first treatment combination.
       The estimates correspond to the coefficient for each term in the regression
       equation. If you wanted to develop an equation to predict your dependent variable
@@ -41,15 +41,14 @@
       (in this case treatment) are factors (ie. they don't have numerical
       significance like treatment A, B, C, etc.). Although the output and
       interpretation of the output is different, ANOVA and regression are
-      two sides of the same coin. In the ANOVA table, we have 6 columns. The source
-      column tells us what term in the model the values are referring to. The
-      Df column denoted the degrees of freedom. A degree of freedom is simply
-      the number of treatments, observations, groups, etc. minus 1. In our case
-      we have 4 treatments, so our treatment degrees of freedom is 3. The residual
-      degrees of freedom are essentially what's left over. It is the total
-      number of degrees of freedom minus what is consumed by the model. Sum Sq
+      two sides of the same coin. In the ANOVA table, we have 7 columns. The source
+      column tells us what term in the model the values are referring to. The Sum Sq
       and Mean Sq refer to the sum of squares and the mean square, respectively.
-      They are essentially measures of the variation in your data. 
+      They are essentially measures of the variation in your data. The NumDF column
+      is the numerator degrees of freedom, and in this case is calculated by
+      the number of treatments (3) - 1. The DenDF is the denominator degrees
+      of freedom and since this is a mixed model, is estimated with the
+      Satterthwaite Approximation. Both of these are used to determine the P value.
       Finally, we have the F and P values column, which are what most folks
       are after with this analysis. The F value is calculated from the mean square
       column, and is used, along with degrees of freedom, to look up the P value. 
@@ -57,10 +56,10 @@
       (say treatment) resulted in differences. For example, if the P value
       for treatment is less than the cutoff (0.05) then we know that at least
       one mean is different. BUT, we don't know which mean(s) is/are different.
-      To determine that we need to run another analysis such as orthogonal 
-      contrasts, pairwise comparisons, etc. You may notice that the P value
+      To determine that we need to use orthogonal 
+      contrasts or pairwise comparisons. You may notice that the P value
       column has weird notation (Pr(>F)). The F distribution is a single-tailed 
-      distribution in which small values indicate little differences between means.
+      distribution in which small values are most probable under the null hypothesis.
       So what this notation means, is that given that the null hypothesis
       (no differences between means) is true, this is the probability of 
       obtaining an F statistic at least as large as what we got with our data. 
@@ -78,9 +77,8 @@
       thought to be more representative of the "true" means in unbalanced designs.
       The SE is the standard error of the mean (standard deviation / sqrt(# samples)),
       and is commonly used to report the variation in the data. The upper and
-      lower confidence limits, with a given confidence level (usually but not always 95%)
-      essentially say "we are 95% confident that the true population mean
-      falls somewhere in this range".
+      lower confidence limits essentially say "we are 95% confident that 
+      the true population mean falls somewhere in this range".
     </LSMEANSDESC>
   </STRINGS>
 </RESOURCES>
