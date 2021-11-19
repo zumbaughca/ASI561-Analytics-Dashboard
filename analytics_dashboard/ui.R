@@ -52,8 +52,8 @@ shinyUI(fluidPage(title = "ASI 560 Analytics Dashboard",
                                               label = h3("Select a day"),
                                               choices = list("0" = "0",
                                                              "14" = "14",
-                                                             "28" = "28"
-                                                             # "0 - 42" = "42"
+                                                             "28" = "28",
+                                                             "42" = "42"
                                                              )))
                          ),
                          plotOutput("result_plot")
@@ -93,8 +93,8 @@ shinyUI(fluidPage(title = "ASI 560 Analytics Dashboard",
                                             choices = list(
                                               "0" = "0",
                                               "14" = "14",
-                                              "28" = "28"
-                                              # "0 - 42" = "42"
+                                              "28" = "28",
+                                              "42" = "42"
                                             )))
                        ),
                        div(style = "width: 100%;",
