@@ -14,7 +14,10 @@ df <- read_xlsx('www/ASI560_F21_growth_data.xlsx') %>%
          delta_hh14 = (hh14 - hh0),
          wt28 = wt28_lbs / 2.20462,
          hh28 = hh28_in * 2.54,
-         adg28 = (wt28 - wt0) / 28)
+         adg28 = (wt28 - wt0) / 28,
+         wt42 = wt42_lbs / 2.20462,
+         hh42 = hh42_in * 2.54,
+         adg42 = (wt42 - wt0) / 42)
 
 # Reference class declaration to hold the variables of interest and the model
 # fit. This class contains getter methods to access the model summary, the ANOVA
